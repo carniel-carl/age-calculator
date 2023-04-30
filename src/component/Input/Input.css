@@ -4,7 +4,7 @@ form {
 .input-details {
   display: flex;
   gap: 0.5rem;
-  width: 80%;
+  width: 100%;
 }
 
 .input-details div {
