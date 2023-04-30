@@ -24,7 +24,7 @@ form button {
   color: white;
   cursor: pointer;
   transform: translateY(50%);
-  transition: color 0.5s;
+  transition: all 0.5s;
   padding: 1rem;
 }
 
