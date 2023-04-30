@@ -1,0 +1,100 @@
+form {
+  position: relative;
+}
+.input-details {
+  display: flex;
+  gap: 0.5rem;
+  width: 75%;
+}
+
+.input-details div {
+  display: flex;
+  flex-direction: column;
+}
+
+form button {
+  position: absolute;
+  bottom: 0;
+  right: 5%;
+  max-height: 75px;
+  max-width: 75px;
+  border-radius: 100%;
+  border: none;
+  background-color: var(--PURPLE);
+  color: white;
+  cursor: pointer;
+  transform: translateY(50%);
+  transition: color 0.5s;
+  padding: 1rem;
+}
+
+button img {
+  display: block;
+  width: 100%;
+}
+
+form button:hover {
+  background-color: var(--OFF-BLACK);
+}
+
+.date {
+  text-transform: uppercase;
+  color: var(--SMOKEY-GREY);
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: 0.7rem;
+  margin-bottom: 0.6rem;
+}
+
+input {
+  height: 50px;
+  width: 85%;
+  padding: 1rem;
+  border: 0.5px solid var(--SMOKEY-GREY);
+  border-radius: 5px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+input::placeholder {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.line {
+  width: 95%;
+  height: 0.7px;
+  background-color: var(--SMOKEY-GREY);
+  margin-block: 3.5rem;
+}
+
+.error {
+  color: var(--LIGHT-RED);
+  font-size: 0.7rem;
+  margin-top: 0.4rem;
+  font-style: italic;
+}
+
+.input-error input {
+  border: 0.5px solid var(--LIGHT-RED);
+}
+
+.input-error .date {
+  color: var(--LIGHT-RED);
+}
+
+@media screen and (max-width: 560px) {
+  form button {
+    height: 60px;
+    width: 60px;
+    right: 40%;
+  }
+
+  .input-details {
+    width: 100%;
+  }
+
+  input {
+    width: 100%;
+  }
+}

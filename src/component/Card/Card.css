@@ -1,0 +1,14 @@
+.card {
+  max-width: 48rem;
+  width: 90vw;
+  max-height: 590px;
+  background-color: var(--WHITE);
+  border-radius: 25px 25px 30% 25px;
+  padding: 50px 60px;
+}
+
+@media screen and (max-width: 560px) {
+  .card {
+    padding: 50px 30px;
+  }
+}
