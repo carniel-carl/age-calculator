@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import "./Input.css";
 import arrow from "../../images/icon-arrow.svg";
 
@@ -9,15 +9,7 @@ const Input = ({ handleChange, noError, errorMessage }) => {
     year: "",
   };
 
-  const inputRef = useRef(null);
-
   const [formValues, setFormValues] = useState(initialValues);
-
-  useEffect(() => {
-    if (inputRef.current) {
-      inputRef.current.focus();
-    }
-  }, [inputRef]);
 
   const changeHandler = (e) => {
     const { name, value } = e.target;
@@ -43,7 +35,6 @@ const Input = ({ handleChange, noError, errorMessage }) => {
             name="day"
             value={formValues.day}
             onChange={changeHandler}
-            ref={inputRef}
           />
           {!noError && <span className="error">{errorMessage.day}</span>}
         </div>
