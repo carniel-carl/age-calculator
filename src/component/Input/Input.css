@@ -65,7 +65,7 @@ input::placeholder {
   width: 95%;
   height: 0.7px;
   background-color: var(--SMOKEY-GREY);
-  margin-block: 2.5rem;
+  margin-block: 3rem;
 }
 
 .error {
