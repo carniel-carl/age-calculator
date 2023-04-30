@@ -52,12 +52,12 @@ input {
   padding: 1rem;
   border: 0.7px solid var(--SMOKEY-GREY);
   border-radius: 5px;
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   font-weight: 700;
 }
 
 input::placeholder {
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   font-weight: 600;
 }
 
