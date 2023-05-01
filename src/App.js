@@ -111,6 +111,8 @@ function App() {
         month = 12 + month;
       }
 
+      day = 30 + day;
+
       if (year < 0) {
         year = 0;
       }
