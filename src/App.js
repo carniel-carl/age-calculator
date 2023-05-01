@@ -94,15 +94,18 @@ function App() {
 
     let today = new Date();
     //birthay has 'Dec 25 1998'
-    let dob = new Date(`${formData.month} ${formData.day} ${formData.year}`);
+    let birthdate = new Date(
+      `${formData.month} ${formData.day} ${formData.year}`
+    );
     //difference in milliseconds
-    let diff = today.getTime() - dob.getTime();
+    let diff = today.getTime() - birthdate.getTime();
     //convert milliseconds into years
     let year = Math.floor(diff / 31556736000);
     //1 day has 86400000 milliseconds
     let days_diff = Math.floor((diff % 31556736000) / 86400000);
     //1 month has 30.4167 days
     let month = Math.floor(days_diff / 30.4167);
+
     let day = Math.floor(days_diff % 30.4167);
 
     details.day = day;
