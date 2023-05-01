@@ -16,8 +16,6 @@ function App() {
 
   const currentDate = new Date();
   const currentYear = currentDate.getFullYear();
-  const currentMonth = currentDate.getMonth();
-  const currentDay = currentDate.getDate();
 
   const inputHandler = (formValues) => {
     const errors = {};
@@ -94,29 +92,18 @@ function App() {
   const calculateAge = (formData) => {
     const details = {};
 
-    let birthdate = new Date(formData.year, formData.month - 1, formData.day);
-
-    let year = currentYear - birthdate.getFullYear();
-    let month = currentMonth - birthdate.getMonth();
-    let day = currentDay - birthdate.getDate();
-
-    // if the birthdate month and day are after the current month and day, subtract
-    // one year from the age
-
-    if (month < 0 || (month === 0 && day < 0)) {
-      year--;
-      if (month === 0) {
-        month = 11;
-      } else {
-        month = 12 + month;
-      }
-
-      day = 30 + day;
-
-      if (year < 0) {
-        year = 0;
-      }
-    }
+    let today = new Date();
+    //birthay has 'Dec 25 1998'
+    let dob = new Date(`${formData.month} ${formData.day} ${formData.year}`);
+    //difference in milliseconds
+    let diff = today.getTime() - dob.getTime();
+    //convert milliseconds into years
+    let year = Math.floor(diff / 31556736000);
+    //1 day has 86400000 milliseconds
+    let days_diff = Math.floor((diff % 31556736000) / 86400000);
+    //1 month has 30.4167 days
+    let month = Math.floor(days_diff / 30.4167);
+    let day = Math.floor(days_diff % 30.4167);
 
     details.day = day;
     details.month = month;
