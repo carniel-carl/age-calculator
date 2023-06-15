@@ -28,7 +28,7 @@ function App() {
         month: "- -",
         year: "- -",
       });
-    } else if (parseInt(formValues.day) < 0 || parseInt(formValues.day) > 31) {
+    } else if (parseInt(formValues.day) <= 0 || parseInt(formValues.day) > 31) {
       errors.day = "Must be a valid day";
       setNoError(false);
       setData({
@@ -47,7 +47,7 @@ function App() {
         year: "- -",
       });
     } else if (
-      parseInt(formValues.month) < 0 ||
+      parseInt(formValues.month) <= 0 ||
       parseInt(formValues.month) > 12
     ) {
       errors.month = "Must be a valid month";
@@ -68,7 +68,7 @@ function App() {
         year: "- -",
       });
     } else if (
-      parseInt(formValues.year) < 900 ||
+      parseInt(formValues.year) <= 10 ||
       parseInt(formValues.year) > currentYear
     ) {
       errors.year = "Must be a valid year";
